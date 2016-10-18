@@ -123,7 +123,7 @@ describe('HDPrivate key interface', function() {
 
   it('allows derivation of hardened keys by passing a very big number', function() {
     var privateKey = new HDPrivateKey(xprivkey);
-    var derivedByNumber = privateKey.derive(0x80000000);
+    var derivedByNumber = privateKey.derive(0x80000088);
     var derivedByArgument = privateKey.derive(0, true);
     derivedByNumber.xprivkey.should.equal(derivedByArgument.xprivkey);
   });
